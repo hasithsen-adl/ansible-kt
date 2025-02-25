@@ -12,6 +12,9 @@ pip install ansible
 # install required Ansible roles
 ansible-galaxy role install -r requirements.yaml
 
+# install required Ansible collections
+ansible-galaxy collection install -r requirements.yaml
+
 # exit Python virtual env
 deactivate
 ```
