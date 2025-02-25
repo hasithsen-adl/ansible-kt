@@ -1,0 +1,10 @@
+---
+collections:
+  - name: community.general
+  - name: ansible.posix
+  - name: community.crypto
+  - name: community.mysql
+
+roles:
+  - name: geerlingguy.nginx
+    version: 3.2.0
