@@ -1,0 +1,28 @@
+
+- name: Nginx conf
+  hosts: ansible_kt_nginx
+  tags: conf
+  become: true
+  gather_facts: true
+  vars:
+    my_name: "MY_NAME_HERE"
+
+  tasks:
+    - name: Create directory
+      ansible.builtin.shell: |
+        mkdir "/var/www/html/{{ my_name }}/"
+
+    - name: Add index.html
+      copy:
+        dest: "/var/www/html/{{ my_name }}/index.html"
+        content: |
+          <h1>Hello world!</h1>
+          <hr />
+          <p>{{ my_name }}</p>
+        mode: '0644'
+
+    - name: Reload service
+      service:
+        name: nginx
+        state: reloaded
+        enabled: yes
