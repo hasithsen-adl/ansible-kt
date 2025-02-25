@@ -1,0 +1,9 @@
+---
+all:
+  hosts:
+    ansible_kt_nginx:
+      ansible_host: IP_HERE
+  vars:
+    ansible_port: 22
+    ansible_user: USERNAME_HERE
+    ansible_python_interpreter: /usr/bin/python3
