@@ -4,7 +4,7 @@ Content for Ansible KT
 ```sh
 # create and activate Python virtual env
 python3 -m venv .pyenv
-source ./pyenv/bin/activate
+source .pyenv/bin/activate
 
 # install Ansible
 pip install ansible
